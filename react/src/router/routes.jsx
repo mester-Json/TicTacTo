@@ -1,7 +1,7 @@
 import React from 'react';
 import { StrictMode } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Game from '../page/TicTacTo'
+import Game from '../page/GameTicTacTo'
 
 function Router() {
   return (
