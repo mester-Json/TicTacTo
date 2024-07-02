@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { BoardContainer, BoardRow, SquareButton, Status } from './Board.style'
-
+import { BoardContainer, BoardRow, SquareButton, Status } from './Board.style';
 
 function Square({ value, onSquareClick }) {
     return <SquareButton onClick={onSquareClick}>{value}</SquareButton>;
@@ -16,24 +15,19 @@ function Board({ xIsNext, squares, onPlay }) {
             return;
         }
         const nextSquares = squares.slice();
-        if (xIsNext) {
-            nextSquares[i] = 'X';
-        } else {
-            nextSquares[i] = 'O';
-        }
+        nextSquares[i] = xIsNext ? 'X' : 'O';
         onPlay(nextSquares);
     }
 
     const winner = calculateWinner(squares);
     let status;
+
     if (winner) {
         status = 'Winner: ' + winner;
+    } else if (squares.every(square => square !== null)) {
+        status = 'No winner';
     } else {
-        if (calculateWinner(squares) === null) {
-            status = 'Next player: ' + (xIsNext ? 'X' : 'O');
-        } else {
-            status = 'No winner yet';
-        }
+        status = 'Next player: ' + (xIsNext ? 'X' : 'O');
     }
 
     return (
@@ -59,7 +53,7 @@ function Board({ xIsNext, squares, onPlay }) {
 }
 
 function calculateWinner(squares) {
-    if (!squares || squares.length < 9) {
+    if (!squares || squares.length !== 9) {
         return null;
     }
     const lines = [
@@ -82,4 +76,3 @@ function calculateWinner(squares) {
 }
 
 export default Board;
-
