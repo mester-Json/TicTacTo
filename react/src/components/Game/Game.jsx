@@ -26,9 +26,9 @@ function Game() {
             description = 'Go to game start';
         }
         return (
-            <li key={move}>
+            <ul key={move}>
                 <MoveButton onClick={() => jumpTo(move)}>{description}</MoveButton>
-            </li>
+            </ul>
         );
     });
 

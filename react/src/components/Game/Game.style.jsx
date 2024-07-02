@@ -16,7 +16,7 @@ export const GameInfo = styled.div`
     `;
 
 export const MovesList = styled.ol`
-    margin:0 25px 0 5px ;
+    margin:0 75px 0 0 ;
 `;
 
 export const MoveButton = styled.button`
@@ -27,4 +27,6 @@ export const MoveButton = styled.button`
     height:20px;
     font-size:15px;
     color:blue;
-`;
+  li:first-child {
+    display: none;
+  }`;
