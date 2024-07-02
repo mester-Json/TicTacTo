@@ -27,6 +27,4 @@ export const MoveButton = styled.button`
     height:20px;
     font-size:15px;
     color:blue;
-  li:first-child {
-    display: none;
-  }`;
+`;
