@@ -29,7 +29,11 @@ function Board({ xIsNext, squares, onPlay }) {
     if (winner) {
         status = 'Winner: ' + winner;
     } else {
-        status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+        if (calculateWinner(squares) === null) {
+            status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+        } else {
+            status = 'No winner yet';
+        }
     }
 
     return (
