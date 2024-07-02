@@ -16,9 +16,15 @@ export const GameInfo = styled.div`
     `;
 
 export const MovesList = styled.ol`
-    padding-left: auto;
+    margin:0 25px 0 5px ;
 `;
 
 export const MoveButton = styled.button`
     margin-bottom: 15px;
+    border-radius: 20px;
+    border:1px ;
+    width:150px;
+    height:20px;
+    font-size:15px;
+    color:blue;
 `;
