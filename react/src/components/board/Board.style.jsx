@@ -21,7 +21,7 @@ export const BoardRow = styled.div`
 export const SquareButton = styled.button`
     width: 60px;
     height: 60px;
-    background: #fff;
+    background: white;
     border: 1px solid #999;
     font-size: 24px;
     font-weight: bold;

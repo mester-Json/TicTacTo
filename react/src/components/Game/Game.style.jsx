@@ -8,10 +8,12 @@ export const GameContainer = styled.div`
 
 export const GameBoard = styled.div`
     margin-bottom: 20px;
+    color:white;
 `;
 
 export const GameInfo = styled.div`
     margin-top: 20px;
+    color: white;
 `;
 
 export const MovesList = styled.ol`
