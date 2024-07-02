@@ -18,12 +18,12 @@ function Game() {
         setCurrentMove(nextMove);
     }
 
-    const moves = history.map((move) => {
+    const moves = history.map((squares, move) => {
         let description;
-        if (move === 0) {
-            description = 'Go to game start';
-        } else {
+        if (move > 0) {
             description = 'Go to move';
+        } else {
+            description = 'Go to game start';
         }
         return (
             <li key={move}>
