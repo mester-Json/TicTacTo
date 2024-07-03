@@ -42,7 +42,7 @@ export const SquareButton = styled.button`
     font-size: 24px;
     font-weight: bold;
     cursor: crosshair;
-    animation: ${borderColorChange} 3s infinite;
+    animation: ${borderColorChange} 6s infinite;
 
     &:focus {
         outline: none;
