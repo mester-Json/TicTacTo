@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 import { StrictMode } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Game from '../page/GameTicTacTo'
